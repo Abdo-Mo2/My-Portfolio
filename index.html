@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Abdullah Mohammed — Junior Frontend Developer portfolio. Angular, responsive UI, and modern web projects."
+    />
+    <title>Abdullah Mohammed | Junior Frontend Developer</title>
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        document.documentElement.classList.toggle('dark', t !== 'light');
+      })();
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(14,116,144,0.14),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(34,211,238,0.12),transparent)]"
+    ></div>
+
+    <header
+      class="sticky top-0 z-40 border-b border-light-border/80 bg-light-surface/85 backdrop-blur-md transition-colors dark:border-white/5 dark:bg-surface/80"
+    >
+      <div
+        class="mx-auto grid max-w-5xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-4 sm:px-6"
+      >
+        <a
+          href="#"
+          class="min-w-0 justify-self-start font-display text-xl font-bold italic tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-teal-700 via-cyan-700 to-sky-700 dark:from-cyan-200 dark:via-accent dark:to-sky-300 sm:text-2xl"
+        >
+          My Portfolio
+        </a>
+        <nav
+          class="col-start-2 row-start-1 hidden items-center justify-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400 sm:flex"
+          aria-label="Primary"
+        >
+          <a
+            href="#skills"
+            class="rounded-md px-1 transition hover:text-accent-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light/70 dark:hover:text-accent dark:focus-visible:ring-accent/70"
+            >Skills</a>
+          <a
+            href="#projects"
+            class="rounded-md px-1 transition hover:text-accent-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light/70 dark:hover:text-accent dark:focus-visible:ring-accent/70"
+            >Projects</a>
+          <a
+            href="#contact"
+            class="rounded-md px-1 transition hover:text-accent-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light/70 dark:hover:text-accent dark:focus-visible:ring-accent/70"
+            >Contact</a>
+        </nav>
+        <div class="col-start-3 row-start-1 flex justify-self-end">
+          <button
+            type="button"
+            id="theme-toggle"
+            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-light-border bg-light-elevated text-amber-600 transition hover:border-accent-light/50 dark:border-white/10 dark:bg-surface-overlay dark:text-amber-300 dark:hover:border-accent/40"
+            aria-label="Toggle light or dark theme"
+          >
+            <i class="fa-solid fa-sun hidden dark:inline" aria-hidden="true"></i>
+            <i class="fa-solid fa-moon inline dark:hidden" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <nav
+        class="flex justify-center gap-5 border-t border-light-border/60 px-4 pb-3 text-sm text-slate-600 dark:border-white/5 dark:text-slate-400 sm:hidden"
+      >
+        <a href="#skills" class="transition hover:text-accent-light dark:hover:text-accent">Skills</a>
+        <a href="#projects" class="transition hover:text-accent-light dark:hover:text-accent">Projects</a>
+        <a href="#contact" class="transition hover:text-accent-light dark:hover:text-accent">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="mx-auto max-w-5xl px-4 pb-20 pt-16 sm:px-6 sm:pt-24"
+        aria-labelledby="hero-heading"
+      >
+        <div
+          class="flex flex-col items-center gap-10 text-center lg:flex-row lg:items-start lg:text-left"
+        >
+          <div
+            class="relative shrink-0 overflow-hidden rounded-2xl border border-light-border shadow-soft ring-1 ring-slate-200/50 transition-colors dark:border-white/10 dark:shadow-glow dark:ring-white/5"
+          >
+            <img
+              src="imges/Abdullah.jfif"
+              alt="Abdullah Mohammed"
+              width="280"
+              height="280"
+              class="h-56 w-56 object-cover sm:h-64 sm:w-64 lg:h-[17.5rem] lg:w-[17.5rem]"
+            />
+          </div>
+          <div class="flex-1 space-y-5">
+            <p
+              class="text-sm font-medium uppercase tracking-widest text-accent-light dark:text-accent"
+            >
+              Hello, I&apos;m
+            </p>
+            <h1
+              id="hero-heading"
+              class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl"
+            >
+              Abdullah Mohammed
+            </h1>
+            <p class="text-lg font-medium text-slate-700 dark:text-slate-300 sm:text-xl">
+              Junior Frontend Developer with practical experience gained through
+              an intensive frontend diploma and hands-on projects.
+            </p>
+            <p
+              class="mx-auto max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-400 lg:mx-0"
+            >
+              I craft clear, responsive interfaces with
+              <strong class="font-medium text-slate-800 dark:text-slate-300">Angular</strong> and
+              modern tooling—focused on usability, performance, and maintainable
+              code.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 lg:justify-start">
+              <a
+                href="#projects"
+                class="inline-flex items-center gap-2 rounded-lg bg-accent-light px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-cyan-800 dark:bg-accent dark:text-surface dark:hover:bg-cyan-300"
+              >
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                View work
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 rounded-lg border border-light-border bg-light-surface px-5 py-2.5 text-sm font-medium text-slate-800 transition hover:border-accent-light/40 hover:text-accent-light dark:border-white/15 dark:bg-surface-raised dark:text-slate-200 dark:hover:border-accent/40 dark:hover:text-accent"
+              >
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                Get in touch
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="border-t border-light-border/80 bg-light-elevated/80 py-20 dark:border-white/5 dark:bg-surface-raised/30"
+        aria-labelledby="skills-heading"
+      >
+        <div class="mx-auto max-w-5xl px-4 sm:px-6">
+          <div class="mb-12 text-center">
+            <h2
+              id="skills-heading"
+              class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
+            >
+              Skills
+            </h2>
+            <p class="mt-3 text-slate-600 dark:text-slate-400">
+              Core tools I use to build interfaces and ship Angular apps.
+            </p>
+          </div>
+          <ul
+            class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6"
+            role="list"
+          >
+            <li class="skill-card-delay-0">
+              <div
+                class="skill-card group flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-light-border bg-light-surface p-6 text-center shadow-soft transition hover:border-orange-300/80 dark:border-white/10 dark:bg-surface-overlay dark:shadow-none dark:hover:border-orange-400/30"
+              >
+                <span class="skill-icon" aria-hidden="true">
+                  <i class="fa-brands fa-html5 text-5xl text-orange-600 dark:text-orange-500"></i>
+                </span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">HTML</span>
+              </div>
+            </li>
+            <li class="skill-card-delay-1">
+              <div
+                class="skill-card group flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-light-border bg-light-surface p-6 text-center shadow-soft transition hover:border-sky-300/80 dark:border-white/10 dark:bg-surface-overlay dark:shadow-none dark:hover:border-sky-400/30"
+              >
+                <span class="skill-icon" aria-hidden="true">
+                  <i class="fa-brands fa-css3-alt text-5xl text-sky-600 dark:text-sky-400"></i>
+                </span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">CSS</span>
+              </div>
+            </li>
+            <li class="skill-card-delay-2">
+              <div
+                class="skill-card group flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-light-border bg-light-surface p-6 text-center shadow-soft transition hover:border-yellow-300/80 dark:border-white/10 dark:bg-surface-overlay dark:shadow-none dark:hover:border-yellow-400/20"
+              >
+                <span class="skill-icon" aria-hidden="true">
+                  <i class="fa-brands fa-js text-5xl text-[#f7df1e]"></i>
+                </span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">JavaScript</span>
+              </div>
+            </li>
+            <li class="skill-card-delay-3">
+              <div
+                class="skill-card group flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-light-border bg-light-surface p-6 text-center shadow-soft transition hover:border-[#3178c6]/50 dark:border-white/10 dark:bg-surface-overlay dark:shadow-none dark:hover:border-[#3178c6]/40"
+              >
+                <span class="skill-icon" aria-hidden="true">
+                  <svg
+                    class="h-12 w-12"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path fill="#3178C6" d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.93.93 0 0 0-.14.491c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.252.165-.11.29-.243.373-.396a1.29 1.29 0 0 0 .126-.576c0-.22-.052-.418-.156-.599a1.796 1.796 0 0 0-.442-.495 4.559 4.559 0 0 0-.699-.418 8.395 8.395 0 0 0-.947-.418 10.163 10.163 0 0 1-1.92-.877 3.206 3.206 0 0 1-1.185-1.046c-.286-.417-.43-.934-.43-1.55 0-.614.114-1.141.34-1.58.227-.439.543-.814.947-1.125.405-.312.887-.546 1.447-.702.56-.156 1.175-.234 1.846-.234zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/>
+                  </svg>
+                </span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">TypeScript</span>
+              </div>
+            </li>
+            <li class="skill-card-delay-4">
+              <div
+                class="skill-card group flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-light-border bg-light-surface p-6 text-center shadow-soft transition hover:border-cyan-300/80 dark:border-white/10 dark:bg-surface-overlay dark:shadow-none dark:hover:border-cyan-400/30"
+              >
+                <span class="skill-icon" aria-hidden="true">
+                  <svg
+                    class="h-10 w-[4.5rem]"
+                    viewBox="0 0 54 33"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="#38bdf8"
+                      fill-rule="evenodd"
+                      d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-5.4 9.45-6.6C12.57 6.6 9.27 10.2 7.5 16.2 5.85 21.9 3.6 24.45 0 24.45c2.7 0 4.95-.9 6.75-2.7-3.6 3.6-5.4 9-5.4 16.2 5.4 0 9.9-2.7 13.5-8.1C21.15 24.45 27 27 33.75 27c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 5.4-9.45 6.6 4.38-2.52 7.68-6.12 9.9-10.8 1.65-5.7 3.9-8.25 7.5-8.25-2.7 0-4.95.9-6.75 2.7 3.6-3.6 5.4-9 5.4-16.2-5.4 0-9.9 2.7-13.5 8.1z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Tailwind</span>
+              </div>
+            </li>
+            <li class="skill-card-delay-5">
+              <div
+                class="skill-card group flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-light-border bg-light-surface p-6 text-center shadow-soft transition hover:border-rose-300/80 dark:border-white/10 dark:bg-surface-overlay dark:shadow-none dark:hover:border-rose-400/30"
+              >
+                <span class="skill-icon" aria-hidden="true">
+                  <i class="fa-brands fa-angular text-5xl text-rose-600 dark:text-rose-500"></i>
+                </span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Angular</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="border-t border-light-border/80 py-20 dark:border-white/5"
+        aria-labelledby="projects-heading"
+      >
+        <div class="mx-auto max-w-5xl px-4 sm:px-6">
+          <div class="mb-12 text-center">
+            <h2
+              id="projects-heading"
+              class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
+            >
+              Selected projects
+            </h2>
+            <p class="mt-3 text-slate-600 dark:text-slate-400">
+              One focus at a time—click the cover to open source or live demo.
+            </p>
+          </div>
+
+          <div class="relative mx-auto max-w-3xl overflow-hidden rounded-2xl">
+            <div
+              id="carousel-track"
+              class="carousel-track"
+              role="list"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <div class="mt-8 flex items-center justify-center gap-4">
+            <button
+              type="button"
+              id="carousel-prev"
+              class="flex h-11 w-11 items-center justify-center rounded-full border border-light-border bg-light-surface text-slate-600 transition hover:border-accent-light/50 hover:text-accent-light dark:border-white/10 dark:bg-surface-overlay dark:text-slate-300 dark:hover:border-accent/40 dark:hover:text-accent"
+              aria-label="Previous project"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div
+              id="carousel-dots"
+              class="flex flex-wrap justify-center gap-2"
+            ></div>
+            <button
+              type="button"
+              id="carousel-next"
+              class="flex h-11 w-11 items-center justify-center rounded-full border border-light-border bg-light-surface text-slate-600 transition hover:border-accent-light/50 hover:text-accent-light dark:border-white/10 dark:bg-surface-overlay dark:text-slate-300 dark:hover:border-accent/40 dark:hover:text-accent"
+              aria-label="Next project"
+            >
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="mx-auto max-w-5xl px-4 py-20 sm:px-6"
+        aria-labelledby="contact-heading"
+      >
+        <div
+          class="rounded-2xl border border-light-border bg-light-surface p-8 text-center shadow-soft dark:border-white/10 dark:bg-surface-raised dark:shadow-glow sm:p-12"
+        >
+          <h2
+            id="contact-heading"
+            class="text-2xl font-bold text-slate-900 dark:text-white sm:text-3xl"
+          >
+            Contact me
+          </h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-400">
+            Open to junior roles, collaborations, and feedback on my work.
+          </p>
+          <a
+            href="mailto:apdualahali6@gmail.com"
+            class="mt-8 inline-flex items-center gap-3 rounded-xl border border-accent-light/35 bg-light-elevated px-6 py-4 text-lg font-medium text-accent-light transition hover:border-accent-light hover:bg-cyan-50 dark:border-accent/30 dark:bg-surface-overlay dark:text-accent dark:hover:border-accent dark:hover:bg-accent/10"
+          >
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            apdualahali6@gmail.com
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="border-t border-light-border py-8 text-center text-sm text-slate-500 dark:border-white/5 dark:text-slate-500"
+    >
+      <p>
+        &copy; <span id="year"></span> Abdullah Mohammed. Built with care.
+      </p>
+    </footer>
+
+    <div
+      id="project-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <button
+        type="button"
+        id="modal-backdrop"
+        class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm dark:bg-black/70"
+        aria-label="Close dialog"
+      ></button>
+      <div
+        class="relative z-10 w-full max-w-lg rounded-2xl border border-light-border bg-light-surface p-6 shadow-2xl dark:border-white/10 dark:bg-surface-raised"
+      >
+        <button
+          type="button"
+          id="modal-close"
+          class="absolute right-4 top-4 rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-white/5 dark:hover:text-white"
+          aria-label="Close"
+        >
+          <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
+        </button>
+        <h3 id="modal-title" class="pr-10 text-xl font-bold text-slate-900 dark:text-white"></h3>
+        <p id="modal-description" class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400"></p>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            id="modal-repo"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-light-border bg-light-elevated px-4 py-3 text-sm font-semibold text-slate-800 transition hover:border-accent-light/50 hover:text-accent-light dark:border-white/15 dark:bg-surface-overlay dark:text-slate-200 dark:hover:border-accent/50 dark:hover:text-accent"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            Source code
+          </a>
+          <a
+            id="modal-live"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-accent-light px-4 py-3 text-sm font-semibold text-white transition hover:bg-cyan-800 dark:bg-accent dark:text-surface dark:hover:bg-cyan-300"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            View project
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
