@@ -60,14 +60,14 @@ function buildSlides() {
     .map(
       (p, i) => `
     <article
-      class="w-full shrink-0 px-2 sm:px-4"
+      class="w-full min-w-0 shrink-0 px-1 xs:px-2 sm:px-4"
       role="listitem"
       data-index="${i}"
       aria-hidden="${i !== 0}"
     >
       <button
         type="button"
-        class="project-card group relative mx-auto block w-full max-w-xl overflow-hidden rounded-2xl border-2 border-light-border bg-light-surface text-left shadow-soft ring-1 ring-slate-200/50 transition duration-300 hover:border-accent-light hover:shadow-lg hover:ring-accent-light/30 focus:outline-none focus-visible:border-accent-light focus-visible:shadow-lg focus-visible:ring-2 focus-visible:ring-accent-light focus-visible:ring-offset-2 focus-visible:ring-offset-light-bg dark:border-white/15 dark:bg-surface-overlay dark:shadow-xl dark:ring-white/10 dark:hover:border-accent dark:hover:shadow-glow dark:hover:ring-accent/25 dark:focus-visible:border-accent dark:focus-visible:ring-accent dark:focus-visible:ring-offset-surface"
+        class="project-card group relative mx-auto block w-full max-w-xl touch-manipulation overflow-hidden rounded-xl border-2 border-light-border bg-light-surface text-left shadow-soft ring-1 ring-slate-200/50 transition duration-300 hover:border-accent-light hover:shadow-lg hover:ring-accent-light/30 focus:outline-none focus-visible:border-accent-light focus-visible:shadow-lg focus-visible:ring-2 focus-visible:ring-accent-light focus-visible:ring-offset-2 focus-visible:ring-offset-light-bg xs:rounded-2xl dark:border-white/15 dark:bg-surface-overlay dark:shadow-xl dark:ring-white/10 dark:hover:border-accent dark:hover:shadow-glow dark:hover:ring-accent/25 dark:focus-visible:border-accent dark:focus-visible:ring-accent dark:focus-visible:ring-offset-surface"
         data-project-index="${i}"
         aria-label="Open ${p.title}—source and live links"
       >
@@ -82,18 +82,18 @@ function buildSlides() {
             class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-slate-950/10 opacity-100 transition-opacity duration-300 group-hover:opacity-35 group-focus-visible:opacity-35 dark:from-surface dark:via-slate-900/40 dark:to-transparent dark:group-hover:opacity-30 dark:group-focus-visible:opacity-30"
           ></div>
           <span
-            class="absolute bottom-4 left-4 right-4 z-10 text-lg font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] sm:text-xl"
+            class="absolute bottom-3 left-3 right-12 z-10 text-base font-semibold leading-snug text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] xs:bottom-4 xs:left-4 xs:right-4 xs:text-lg sm:text-xl"
           >
             ${p.title}
           </span>
           <span
-            class="absolute right-4 top-4 z-10 rounded-full border border-white/20 bg-white/95 px-3 py-1 text-xs font-semibold text-accent-light shadow-sm backdrop-blur-sm transition group-hover:border-accent-light/50 group-hover:bg-white group-focus-visible:border-accent-light/50 group-focus-visible:bg-white dark:border-white/10 dark:bg-black/60 dark:text-accent dark:group-hover:bg-cyan-950/90 dark:group-focus-visible:bg-cyan-950/90"
+            class="absolute right-2 top-2 z-10 max-w-[calc(100%-1rem)] truncate rounded-full border border-white/20 bg-white/95 px-2 py-1 text-[10px] font-semibold text-accent-light shadow-sm backdrop-blur-sm transition group-hover:border-accent-light/50 group-hover:bg-white group-focus-visible:border-accent-light/50 group-focus-visible:bg-white xs:right-4 xs:top-4 xs:px-3 xs:text-xs dark:border-white/10 dark:bg-black/60 dark:text-accent dark:group-hover:bg-cyan-950/90 dark:group-focus-visible:bg-cyan-950/90"
           >
             Tap for links
           </span>
         </div>
-        <div class="p-5">
-          <p class="line-clamp-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+        <div class="p-3 xs:p-5">
+          <p class="line-clamp-3 text-xs leading-relaxed text-slate-600 xs:text-sm dark:text-slate-400">
             ${p.description}
           </p>
         </div>
@@ -216,3 +216,31 @@ if (themeToggle) {
 }
 
 buildSlides();
+
+const carouselViewport = document.getElementById('carousel-viewport');
+if (carouselViewport && track) {
+  let touchStartX = 0;
+  const swipeThreshold = 45;
+  carouselViewport.addEventListener(
+    'touchstart',
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
+  carouselViewport.addEventListener(
+    'touchend',
+    (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const dx = touchEndX - touchStartX;
+      if (Math.abs(dx) < swipeThreshold) return;
+      if (dx < 0) {
+        index = (index + 1) % projects.length;
+      } else {
+        index = (index - 1 + projects.length) % projects.length;
+      }
+      updateCarousel();
+    },
+    { passive: true }
+  );
+}

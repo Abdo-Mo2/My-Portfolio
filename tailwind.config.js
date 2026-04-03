@@ -4,6 +4,13 @@ module.exports = {
   content: ['./*.html', './js/**/*.js'],
   theme: {
     extend: {
+      screens: {
+        xs: '380px',
+        '3xl': '1920px',
+      },
+      maxWidth: {
+        'screen-2xl': '96rem',
+      },
       fontFamily: {
         sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
         display: ['"Playfair Display"', 'Georgia', 'serif'],
